@@ -72,7 +72,9 @@ Autogenerates docs for you.
 https://github.com/storybookjs/storybook/tree/master/addons/a11y
 
 ### knobs:
-```yarn add @storybook/addon-knobs --dev```
+```shell script
+yarn add @storybook/addon-knobs --dev
+```
 
 ## Testing?
 https://www.learnstorybook.com/intro-to-storybook/react/en/test/
@@ -89,8 +91,14 @@ https://www.learnstorybook.com/intro-to-storybook/react/en/simple-component/
 -  recording the “known good” output of a component for a given input
     and then flagging the component whenever the output changes in future.
 
-```yarn add -D @storybook/addon-storyshots react-test-renderer```
-```yarn test:unit```
+```shell script
+yarn add -D @storybook/addon-storyshots react-test-renderer
+```
+
+```shell script
+ yarn test:unit
+```
+
 
 
 ###Unit Testing
@@ -125,4 +133,21 @@ This is perfect for verifying graphical elements like layout, color, size, and c
 
 Recommended tool: Chromatic
 
+Chromatic:
+```shell script
+yarn add -D storybook-chromatic
+```
 
+https://www.chromaticqa.com/start
+https://docs.chromaticqa.com/setup_ci
+
+```shell script
+npx chromatic --app-code=<appcode>
+```
+First time this uploads the shots to their server. Also add a script to the package.json
+
+Running it again after making changes compares each visual from the server.
+
+```shell script
+yarn chromatic
+```
