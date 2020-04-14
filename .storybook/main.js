@@ -8,5 +8,7 @@ module.exports = {
     '@storybook/addon-docs/preset',
 
     '@storybook/addon-a11y/register',
+
+    '@storybook/addon-knobs/register'
   ],
 };

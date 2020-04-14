@@ -63,11 +63,16 @@ Decorators are wrapper components or Storybook decorators that wrap a story.
 
 
 Addon Docs:
+https://github.com/storybookjs/storybook/tree/master/addons/docs
 yarn add -D @storybook/addon-docs@next
 Autogenerates docs for you.
 (Demo)
 
+Accessibility:
+https://github.com/storybookjs/storybook/tree/master/addons/a11y
 
+knobs:
+yarn add @storybook/addon-knobs --dev
 
 Testing?
 

@@ -2,7 +2,7 @@ import React from "react";
 import { withKnobs, text, boolean, number } from "@storybook/addon-knobs";
 
 export default {
-  title: "Storybook Knobs",
+  title: "Knobs",
   decorators: [withKnobs]
 };
 // Add the `withKnobs` decorator to add knobs support to your stories.
