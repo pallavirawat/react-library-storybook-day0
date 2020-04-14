@@ -52,37 +52,77 @@ https://storybook.js.org/docs/formats/component-story-format/
 
 ===============================================================================
 
-Adons:
+## Adons:
 https://storybook.js.org/addons/
 
-Actions:  create actions handlers. By default comes with storybook
+### Actions:  create actions handlers. By default comes with storybook
 
 
-Decorators: COme by default as well
+### Decorators: COme by default as well
 Decorators are wrapper components or Storybook decorators that wrap a story.
 
 
-Addon Docs:
+### Addon Docs:
 https://github.com/storybookjs/storybook/tree/master/addons/docs
 yarn add -D @storybook/addon-docs@next
 Autogenerates docs for you.
 (Demo)
 
-Accessibility:
+### Accessibility:
 https://github.com/storybookjs/storybook/tree/master/addons/a11y
 
-knobs:
-yarn add @storybook/addon-knobs --dev
+### knobs:
+```yarn add @storybook/addon-knobs --dev```
 
-Testing?
+## Testing?
+https://www.learnstorybook.com/intro-to-storybook/react/en/test/
+
+### Visual Testing:
+rely on developers to manually look at a component to verify it for correctness.
+They help us sanity check a component’s appearance as we build.
+
+### Snapshot testing
+capture a component’s rendered markup.
+They help us stay abreast of markup changes that cause rendering errors and warnings.
+
 https://www.learnstorybook.com/intro-to-storybook/react/en/simple-component/
-Snapshot testing
 -  recording the “known good” output of a component for a given input
     and then flagging the component whenever the output changes in future.
 
-yarn add -D @storybook/addon-storyshots react-test-renderer
+```yarn add -D @storybook/addon-storyshots react-test-renderer```
+```yarn test:unit```
 
 
+###Unit Testing
+verify that the output of a component remains the same given a fixed input.
+ They’re great for testing the functional qualities of a component.
 
+Here we are testing that pinned tasks are rendered before unpinned tasks.
+Human eye can sometimes fail to notice this change and we might end up updating the snapshot.
+
+ex.
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { WithPinnedTasks } from './TaskList.stories';
+
+it('renders pinned tasks at the start of the list', () => {
+  const div = document.createElement('div');
+  ReactDOM.render(<WithPinnedTasks />, div);
+
+  // We expect the task titled "Task 6 (pinned)" to be rendered first, not at the end
+  const lastTaskInput = div.querySelector('.list-item:nth-child(1) input[value="Task 6 (pinned)"]');
+  expect(lastTaskInput).not.toBe(null);
+
+  ReactDOM.unmountComponentAtNode(div);
+});
+```
+
+### visual regression testing
+catch changes in appearance.
+They work by capturing screenshots of every story and comparing them commit-to-commit to surface changes.
+This is perfect for verifying graphical elements like layout, color, size, and contrast.
+
+Recommended tool: Chromatic
 
 
