@@ -50,13 +50,22 @@ About writing stories:
 Default is Component Story Format (CSF):
 https://storybook.js.org/docs/formats/component-story-format/
 
+===============================================================================
+
 Adons:
-Actions:  create actions handlers.
+https://storybook.js.org/addons/
+
+Actions:  create actions handlers. By default comes with storybook
 
 
-Decorators:
+Decorators: COme by default as well
 Decorators are wrapper components or Storybook decorators that wrap a story.
 
+
+Addon Docs:
+yarn add -D @storybook/addon-docs@next
+Autogenerates docs for you.
+(Demo)
 
 
 
