@@ -75,6 +75,12 @@ knobs:
 yarn add @storybook/addon-knobs --dev
 
 Testing?
+https://www.learnstorybook.com/intro-to-storybook/react/en/simple-component/
+Snapshot testing
+-  recording the “known good” output of a component for a given input
+    and then flagging the component whenever the output changes in future.
+
+yarn add -D @storybook/addon-storyshots react-test-renderer
 
 
 
