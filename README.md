@@ -29,24 +29,25 @@ class Example extends Component {
 
 MIT © [](https://github.com/)
 
-Steps we shall we following:
-1. npx -p @storybook/cli sb init
-
+## Adding a storybook
+```shell script
+npx -p @storybook/cli sb init
+```
 
 This will add 2 stories samples and setup rest of the things for you!
 Also creates .storybook with main.js
 
 
-Some Examples:
+## Some Examples:
 http://airbnb.io/react-dates/?path=/story/daterangepicker-drp--default
 https://necolas.github.io/react-native-web/docs/?path=/docs/overview-getting-started--page
 
-Nice intro tutorial:
+## Nice intro tutorial:
 https://www.learnstorybook.com/intro-to-storybook/react/en/get-started/
 
-Component Driven Development : build process around components, which end up in pages or screens
+`Component Driven Development` : build process around components, which end up in pages or screens
 
-About writing stories:
+### About writing stories:
 Default is Component Story Format (CSF):
 https://storybook.js.org/docs/formats/component-story-format/
 
@@ -64,7 +65,9 @@ Decorators are wrapper components or Storybook decorators that wrap a story.
 
 ### Addon Docs:
 https://github.com/storybookjs/storybook/tree/master/addons/docs
+```shell script
 yarn add -D @storybook/addon-docs@next
+```
 Autogenerates docs for you.
 (Demo)
 
@@ -101,7 +104,7 @@ yarn add -D @storybook/addon-storyshots react-test-renderer
 
 
 
-###Unit Testing
+### Unit Testing
 verify that the output of a component remains the same given a fixed input.
  They’re great for testing the functional qualities of a component.
 
