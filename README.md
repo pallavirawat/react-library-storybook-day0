@@ -50,7 +50,19 @@ About writing stories:
 Default is Component Story Format (CSF):
 https://storybook.js.org/docs/formats/component-story-format/
 
+Adons:
+Actions:  create actions handlers.
+
+
+Decorators:
+Decorators are wrapper components or Storybook decorators that wrap a story.
+
+
+
+
 Testing?
+
+
 
 
 
