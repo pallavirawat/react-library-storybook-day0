@@ -29,5 +29,9 @@ class Example extends Component {
 
 MIT © [](https://github.com/)
 
+Steps we shall we following:
+1. npx -p @storybook/cli sb init
+
+
 
 
