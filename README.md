@@ -33,5 +33,24 @@ Steps we shall we following:
 1. npx -p @storybook/cli sb init
 
 
+This will add 2 stories samples and setup rest of the things for you!
+Also creates .storybook with main.js
+
+
+Some Examples:
+http://airbnb.io/react-dates/?path=/story/daterangepicker-drp--default
+https://necolas.github.io/react-native-web/docs/?path=/docs/overview-getting-started--page
+
+Nice intro tutorial:
+https://www.learnstorybook.com/intro-to-storybook/react/en/get-started/
+
+Component Driven Development : build process around components, which end up in pages or screens
+
+About writing stories:
+Default is Component Story Format (CSF):
+https://storybook.js.org/docs/formats/component-story-format/
+
+Testing?
+
 
 
